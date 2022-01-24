@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate') %> 
+
+    <h4>Driver First Name: <%= driver.first %> </h4>
+    <h4>Driver Last Name: <%= driver.last %> </h4>
+    <h4>Driver SSN: <%= driver.SSN%></h4>
+    
+    <p>
+        <form action="/busdrivers/<%=driver._id%>?_method=DELETE" method="POST">
+        <button class="btn btn-danger"  >Delete</button>
+        <a href="/busdrivers/<%=driver._id%>/edit" class="btn btn-info ">Edit</a>
+        </form>
+    <p>        
+ 
+    <footer>
+        <a href="/busdrivers/<%=driver._id%>/buses/new" class="btn btn-warning ">ADD A BUS </a>?class="btn btn-secondary btn"
+        <a href="/busdrivers" class="btn btn-success ">All bus driver</a>
+    </footer>

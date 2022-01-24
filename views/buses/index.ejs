@@ -1,0 +1,13 @@
+<% layout('layouts/boilerplate') %> 
+
+    <h1>All Buses </h1>
+    
+    <ul class="list-group">
+        <% for (let abus of buses) { %>
+            <li class="list-group-item"><a href="/buses/<%= abus._id %>"><%= abus.model %></a></li>
+        <% } %>
+    </ul>
+
+    <div>
+        <a href="/buses/new" class="btn btn-primary btn" tabindex="-1" role="button" aria-disabled="true" >Add new Bus</a>
+    </div>

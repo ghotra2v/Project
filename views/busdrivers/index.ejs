@@ -1,0 +1,12 @@
+<% layout('layouts/boilerplate') %> 
+
+    <h1>All Busdrivers</h1>
+    
+    <ul class="list-group">
+        <% for (let driver of busdrivers) { %>
+            <li class="list-group-item"><a href="/busdrivers/<%= driver._id %>"><%= driver.first %></a></li>
+        <% } %>
+    </ul>
+    <div>
+        <a href="/busdrivers/new" class="btn btn-primary btn" tabindex="-1" role="button" aria-disabled="true"  >Add new driver</a>
+    </div>

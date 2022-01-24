@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate') %> 
+
+<h4>Model of bus: <%= abus.model %> </h4>
+<h4>Make of bus: <%= abus.make %> </h4>
+<h4>Capacity of bus: <%= abus.capacity%></h4>
+
+
+<p>
+    <form action="/buses/<%=abus._id%>?_method=DELETE" method="POST">
+    <button class="btn btn-danger " >Delete</button>
+    <a href="/buses/<%=abus._id%>/edit" class="btn btn-warning ">Edit</a>
+    </form>
+    
+</p>
+
+<footer>
+   
+    <a href="/buses" class="btn btn-success ">All bus driver</a>
+</footer>
